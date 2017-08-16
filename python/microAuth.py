@@ -6,7 +6,7 @@ import re
 import sys
 import traceback
 
-from . import getProxy
+from utils import getProxy
 
 from flask import Flask, request, send_file
 app = Flask(__name__)
@@ -57,5 +57,5 @@ def provideProxy():
     else:
         logger.error('Did not get valid proxy.')
 
-    print ("Sending %s" % userProxy)
+    logger.info("Sending %s" % userProxy)
     return send_file(userProxy)
