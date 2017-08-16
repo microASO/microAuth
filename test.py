@@ -26,7 +26,7 @@ try:
                          'uisource': "/data/srv/tmp.sh"
                         }
 
-    cache_area = 'https://cmsweb.cern.ch/crabserver/prod/filemetadata'
+    cache_area = 'https://cmsweb-testbed.cern.ch/crabserver/preprod/filemetadata'
     getCache = re.compile('https?://([^/]*)/.*')
     myproxyAccount = getCache.findall(cache_area)[0]
     defaultDelegation['myproxyAccount'] = myproxyAccount
