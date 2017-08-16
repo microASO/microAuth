@@ -1,6 +1,6 @@
 FROM python:2.7-slim
 
-RUN pip install gunicorn json-logging-py
+RUN pip install gunicorn json-logging-py flask
 
 COPY logging.conf /logging.conf
 COPY gunicorn.conf /gunicorn.conf
